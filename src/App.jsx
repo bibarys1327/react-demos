@@ -1,14 +1,17 @@
 import React from "react";
-import useFetch from "./useFetch";
+import UniqueID from "./components/UniqueID";
 
 const App = () => {
-  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
   return (
     <div>
-      {data &&
-        data.map((item) => {
-          return <p key={item.id}>{item.title}</p>;
-        })}
+      <UniqueID />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        voluptatibus beatae dolorem dicta laudantium itaque recusandae sunt
+        expedita tempore eveniet rerum molestias, doloribus earum odio atque
+        officiis omnis numquam exercitationem.
+      </p>
+      <UniqueID />
     </div>
   );
 };
