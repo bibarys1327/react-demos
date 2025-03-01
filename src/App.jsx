@@ -1,10 +1,17 @@
 import React from "react";
-import Counter from "./components/Counter";
+import { useRef } from "react";
 
 const App = () => {
+  const inputElement = useRef(null);
+
+  const focusInput = () => {
+    inputElement.current.focus();
+    inputElement.current.value = "John Doe";
+  };
   return (
     <div>
-      <Counter />
+      <input type="text" ref={inputElement} />
+      <button onClick={() => focusInput()}>Focus</button>
     </div>
   );
 };
